@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools Hub - Text and Data Analysis Tools</title>
+    <meta property="og:title" content="Tools Hub - Text and Data Analysis Tools">
+    <meta property="og:description" content="A collection of powerful tools for text and data analysis.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="tools.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="/" class="home-btn">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <h1 class="app-title">Tools Hub</h1>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="hero">
+                <h2 class="hero-title">Welcome to Tools Hub</h2>
+                <p class="hero-subtitle">A collection of powerful tools to help you work with text and data</p>
+            </div>
+
+            <div class="tools-grid">
+                <a href="/textanalysis.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-text"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Text Analysis</h3>
+                        <p>Analyze text content with real-time statistics, word counting, and text manipulation tools.</p>
+                    </div>
+                </a>
+
+                <a href="/table.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>CSV File Viewer</h3>
+                        <p>View, sort, and analyze CSV files with an intuitive table interface and data visualization.</p>
+                    </div>
+                </a>
+
+                <a href="/dataviz.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Data Visualization</h3>
+                        <p>Create beautiful charts and graphs from your data with customizable options.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <div id="notification" class="notification hidden">
+        <i class="fas"></i>
+        <span></span>
+        <button class="notification-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="notification-progress"></div>
+    </div>
+
+    <script src="tools.js"></script>
+</body>
+</html>

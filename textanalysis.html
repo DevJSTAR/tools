@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analysis Tool</title>
+    <meta property="og:title" content="Text Analysis Tool">
+    <meta property="og:description" content="Analyze text with real-time statistics and advanced text manipulation features">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="textanalysis.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="/" class="home-btn" aria-label="Home">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <h1 class="app-title">Text Analysis</h1>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="editor-section">
+                <div class="file-upload" id="dropZone">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drop your text file here<br>or click to select</p>
+                        <input type="file" id="fileInput" accept=".txt" hidden>
+                    </div>
+                </div>
+
+                <div class="editor-container">
+                    <div class="editor-header">
+                        <div class="editor-title">
+                            <i class="fas fa-edit"></i>
+                            <span>Text Editor</span>
+                        </div>
+                        <div class="editor-actions">
+                            <button id="copyBtn" class="action-btn" aria-label="Copy text">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button id="clearBtn" class="action-btn" aria-label="Clear text">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <textarea id="textInput" placeholder="Enter or paste your text here..."></textarea>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <div class="stats-grid">
+                    <div class="stat-card" data-stat="characters">
+                        <div class="stat-icon">
+                            <i class="fas fa-text-width"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Characters</h3>
+                            <p class="stat-value">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card" data-stat="words">
+                        <div class="stat-icon">
+                            <i class="fas fa-font"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Words</h3>
+                            <p class="stat-value">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card" data-stat="sentences">
+                        <div class="stat-icon">
+                            <i class="fas fa-align-left"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Sentences</h3>
+                            <p class="stat-value">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card" data-stat="paragraphs">
+                        <div class="stat-icon">
+                            <i class="fas fa-paragraph"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Paragraphs</h3>
+                            <p class="stat-value">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools-section">
+                    <div class="find-replace">
+                        <div class="tool-header">
+                            <i class="fas fa-search-replace"></i>
+                            <h3>Find & Replace</h3>
+                        </div>
+                        <div class="tool-content">
+                            <div class="input-group">
+                                <input type="text" id="findInput" placeholder="Find...">
+                                <input type="text" id="replaceInput" placeholder="Replace with...">
+                            </div>
+                            <button id="replaceBtn" class="replace-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                                Replace All
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="notification" class="notification hidden">
+        <i class="fas"></i>
+        <span></span>
+        <button class="notification-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="notification-progress"></div>
+    </div>
+
+    <script src="textanalysis.js"></script>
+</body>
+</html>
